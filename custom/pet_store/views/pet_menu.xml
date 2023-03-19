@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- import tree view -->
+    <import file="product_view.xml"/>
+    <!-- Definición de la Acción -->
+    <record id="action_pet_tree" model="ir.actions.act_window">
+        <field name="name">lista de mascotas</field>
+        <field name="res_model">pet.store</field>
+        <field name="view_type">tree</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definición de los menús -->
+    <menuitem id="main_pet_menu" name="Pet Store"/>
+    <menuitem id="pet_menu" name="Mascotas" parent="main_pet_menu"/>
+    <menuitem id="pet_tree_menu" name="Lista de mascotas" parent="pet_menu" action="action_pet_tree" view_id="view_pet_tree"/>
+
+</odoo>

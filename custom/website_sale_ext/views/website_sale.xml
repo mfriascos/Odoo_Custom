@@ -1,0 +1,14 @@
+
+<odoo>
+    <data>
+    
+        <template id="website_sale_address_passport" name="passport_data" inherit_id="website_sale.address">
+
+            <xpath expr="//input[@name='name']" position="after">
+                <h2>Hello</h2>
+            </xpath>
+
+        </template>
+    
+    </data>
+</odoo>
